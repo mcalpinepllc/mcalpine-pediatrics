@@ -1,0 +1,102 @@
+/*
+ * W. Esther McAlpine, M.D., P.C. — The Open Porch
+ * Squarespace portability layer. Preserve the quiet editorial hierarchy,
+ * reserved coral accents, Live Oak trust surfaces, and visible focus states.
+ */
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Manrope:wght@400;500;600;700&display=swap");
+
+:root {
+  --mcalpine-coral: oklch(0.69 0.155 35);
+  --mcalpine-coral-deep: oklch(0.55 0.145 34);
+  --mcalpine-coral-soft: oklch(0.95 0.045 45);
+  --mcalpine-live-oak: oklch(0.31 0.06 174);
+  --mcalpine-porch: oklch(0.985 0.018 86);
+  --mcalpine-sage: oklch(0.92 0.036 151);
+  --mcalpine-ink: oklch(0.29 0.018 67);
+  --mcalpine-focus: 0 0 0 4px color-mix(in oklab, var(--mcalpine-coral) 38%, transparent);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--mcalpine-porch);
+  color: var(--mcalpine-ink);
+  font-family: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+.header-title-text {
+  color: var(--mcalpine-live-oak);
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 600;
+  letter-spacing: -0.035em;
+}
+
+p,
+li {
+  line-height: 1.72;
+}
+
+.mcalpine-anchor {
+  position: relative;
+  top: -96px;
+  visibility: hidden;
+}
+
+.sqs-button-element--primary,
+.sqs-block-button-element--medium,
+.sqs-block-button-element--large {
+  border-radius: 999px !important;
+  background: var(--mcalpine-coral-deep) !important;
+  color: white !important;
+  font-family: "Manrope", ui-sans-serif, system-ui, sans-serif !important;
+  font-weight: 700 !important;
+  transition: background-color 180ms cubic-bezier(0.23, 1, 0.32, 1), transform 160ms cubic-bezier(0.23, 1, 0.32, 1) !important;
+}
+
+.sqs-button-element--primary:hover,
+.sqs-block-button-element--medium:hover,
+.sqs-block-button-element--large:hover {
+  background: var(--mcalpine-live-oak) !important;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+.sqs-button-element--primary:focus-visible {
+  outline: 2px solid transparent !important;
+  box-shadow: var(--mcalpine-focus) !important;
+}
+
+button:active,
+.sqs-button-element--primary:active {
+  transform: scale(0.97);
+}
+
+::selection {
+  background: color-mix(in oklab, var(--mcalpine-coral) 35%, white);
+  color: var(--mcalpine-live-oak);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

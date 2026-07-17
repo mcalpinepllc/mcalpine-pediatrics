@@ -1,0 +1,233 @@
+<!--
+  W. Esther McAlpine, M.D., P.C. — portable Squarespace insurance planner.
+  Paste this entire file into one Squarespace Code block set to HTML.
+  This planning aid does not verify benefits, calculate responsibility, accept payment,
+  or collect protected health information. Verify every carrier status before publication.
+-->
+<section id="mcalpine-coverage-planner" aria-labelledby="mcalpine-coverage-heading">
+  <style>
+    #mcalpine-coverage-planner {
+      --coral: #df765b;
+      --coral-deep: #b84834;
+      --coral-soft: #fff0e8;
+      --oak: #174c42;
+      --porch: #fffaf0;
+      --sage: #dceede;
+      --ink: #34322d;
+      border: 1px solid rgba(23, 76, 66, 0.18);
+      border-left: 6px solid var(--coral);
+      background: rgba(255, 255, 255, 0.82);
+      box-shadow: 0 22px 60px rgba(43, 50, 42, 0.09);
+      color: var(--ink);
+      font-family: "Manrope", ui-sans-serif, system-ui, sans-serif;
+      padding: clamp(1.35rem, 4vw, 2.5rem);
+    }
+
+    #mcalpine-coverage-planner *,
+    #mcalpine-coverage-planner *::before,
+    #mcalpine-coverage-planner *::after {
+      box-sizing: border-box;
+    }
+
+    #mcalpine-coverage-planner .planner-kicker {
+      color: var(--coral-deep);
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      margin: 0;
+      text-transform: uppercase;
+    }
+
+    #mcalpine-coverage-planner h3 {
+      color: var(--oak);
+      font-family: "Fraunces", Georgia, serif;
+      font-size: clamp(1.65rem, 4vw, 2.25rem);
+      letter-spacing: -0.025em;
+      line-height: 1.1;
+      margin: 0.55rem 0 1.5rem;
+    }
+
+    #mcalpine-coverage-planner label {
+      color: var(--oak);
+      display: block;
+      font-size: 0.92rem;
+      font-weight: 750;
+      margin: 1rem 0 0.45rem;
+    }
+
+    #mcalpine-coverage-planner .optional {
+      color: rgba(52, 50, 45, 0.62);
+      font-weight: 500;
+    }
+
+    #mcalpine-coverage-planner select,
+    #mcalpine-coverage-planner input {
+      appearance: auto;
+      background: var(--porch);
+      border: 1px solid rgba(23, 76, 66, 0.23);
+      border-radius: 0.75rem;
+      color: var(--ink);
+      font: inherit;
+      min-height: 3rem;
+      padding: 0.75rem 0.9rem;
+      width: 100%;
+    }
+
+    #mcalpine-coverage-planner select:focus-visible,
+    #mcalpine-coverage-planner input:focus-visible,
+    #mcalpine-coverage-planner button:focus-visible,
+    #mcalpine-coverage-planner a:focus-visible {
+      outline: 3px solid color-mix(in srgb, var(--coral) 55%, white);
+      outline-offset: 3px;
+    }
+
+    #mcalpine-coverage-planner button {
+      background: var(--oak);
+      border: 0;
+      border-radius: 0.75rem;
+      color: white;
+      cursor: pointer;
+      font: inherit;
+      font-weight: 800;
+      margin-top: 1.25rem;
+      min-height: 3rem;
+      padding: 0.8rem 1rem;
+      transition: background-color 180ms cubic-bezier(0.23, 1, 0.32, 1), transform 160ms cubic-bezier(0.23, 1, 0.32, 1);
+      width: 100%;
+    }
+
+    #mcalpine-coverage-planner button:hover {
+      background: var(--coral-deep);
+    }
+
+    #mcalpine-coverage-planner button:active {
+      transform: scale(0.98);
+    }
+
+    #mcalpine-coverage-result {
+      min-height: 6.5rem;
+      padding-top: 1.25rem;
+    }
+
+    #mcalpine-coverage-result .result-card {
+      background: var(--sage);
+      border: 1px solid rgba(23, 76, 66, 0.16);
+      border-radius: 0.9rem;
+      padding: 1rem;
+    }
+
+    #mcalpine-coverage-result .result-card.confirm {
+      background: var(--coral-soft);
+      border-color: rgba(184, 72, 52, 0.25);
+    }
+
+    #mcalpine-coverage-result strong {
+      color: var(--oak);
+      display: block;
+    }
+
+    #mcalpine-coverage-result p {
+      line-height: 1.6;
+      margin: 0.35rem 0 0;
+    }
+
+    #mcalpine-coverage-result a {
+      color: var(--coral-deep);
+      display: inline-block;
+      font-weight: 800;
+      margin-top: 0.75rem;
+      text-underline-offset: 0.22em;
+    }
+
+    #mcalpine-coverage-planner .planner-disclaimer {
+      color: rgba(52, 50, 45, 0.7);
+      font-size: 0.82rem;
+      line-height: 1.55;
+      margin: 0.5rem 0 0;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      #mcalpine-coverage-planner button {
+        transition: none;
+      }
+    }
+  </style>
+
+  <p class="planner-kicker">Coverage note · No. 01</p>
+  <h3 id="mcalpine-coverage-heading">Plan before you arrive.</h3>
+
+  <form id="mcalpine-coverage-form">
+    <label for="mcalpine-plan">Choose your insurance plan</label>
+    <select id="mcalpine-plan" required>
+      <option value="" disabled selected>Select a plan</option>
+      <option value="aetna">Aetna</option>
+      <option value="anthem">Anthem / Blue Cross Blue Shield of Georgia</option>
+      <option value="cigna">Cigna</option>
+      <option value="united">UnitedHealthcare</option>
+      <option value="kaiser">Kaiser Permanente</option>
+      <option value="medicaid">Georgia Medicaid / PeachCare for Kids</option>
+      <option value="peach">Peach State Health Plan</option>
+      <option value="wellpoint">Wellpoint Georgia</option>
+      <option value="caresource">CareSource</option>
+      <option value="other">Another plan</option>
+    </select>
+
+    <label for="mcalpine-copay">Co-pay shown on your card <span class="optional">(optional)</span></label>
+    <input id="mcalpine-copay" type="number" inputmode="decimal" min="0" step="0.01" placeholder="25.00" />
+
+    <button type="submit">Check plan &amp; estimate</button>
+  </form>
+
+  <div id="mcalpine-coverage-result" role="status" aria-live="polite">
+    <p class="planner-disclaimer">Insurance participation and patient responsibility can change. This tool is a planning aid, not a coverage guarantee.</p>
+  </div>
+
+  <script>
+    (() => {
+      const root = document.getElementById("mcalpine-coverage-planner");
+      if (!root || root.dataset.ready === "true") return;
+      root.dataset.ready = "true";
+
+      const form = root.querySelector("#mcalpine-coverage-form");
+      const planField = root.querySelector("#mcalpine-plan");
+      const copayField = root.querySelector("#mcalpine-copay");
+      const result = root.querySelector("#mcalpine-coverage-result");
+      const listedPlans = new Set(["aetna", "anthem", "cigna", "united"]);
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const option = planField.options[planField.selectedIndex];
+        if (!option || !option.value) return;
+
+        const listed = listedPlans.has(option.value);
+        const parsed = Number.parseFloat(copayField.value);
+        const copay = Number.isFinite(parsed) ? Math.max(0, parsed) : null;
+        const card = document.createElement("div");
+        card.className = `result-card${listed ? "" : " confirm"}`;
+
+        const title = document.createElement("strong");
+        title.textContent = listed ? "Listed in public provider directories" : "Please confirm with the office";
+
+        const detail = document.createElement("p");
+        detail.textContent = listed
+          ? `Dr. McAlpine appears in public listings for ${option.text}. Network participation still varies by exact plan, employer, and year.`
+          : `We do not have a verified current listing for ${option.text}. This does not mean the plan is declined—the office can check your exact product.`;
+
+        card.append(title, detail);
+
+        if (copay !== null) {
+          const amount = document.createElement("p");
+          amount.textContent = `Entered co-pay: $${copay.toFixed(2)}`;
+          card.append(amount);
+        }
+
+        const call = document.createElement("a");
+        call.href = "tel:+19123493682";
+        call.textContent = "Confirm at (912) 349-3682";
+        card.append(call);
+
+        result.replaceChildren(card);
+      });
+    })();
+  </script>
+</section>
