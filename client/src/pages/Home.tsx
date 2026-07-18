@@ -45,17 +45,18 @@ export default function Home() {
       <main id="main-content">
         <section id="home" className="paper-grain relative scroll-mt-24 overflow-hidden border-b border-live-oak/10 bg-porch">
           <div className="pointer-events-none absolute -left-24 top-20 h-72 w-72 rounded-full bg-coral/10 blur-3xl" aria-hidden="true" />
-          <div className="container grid min-h-[690px] items-center gap-10 py-12 lg:grid-cols-[0.92fr_1.08fr] lg:gap-16 lg:py-16">
+          <div className="pointer-events-none absolute right-[4%] top-[16%] h-72 w-72 rounded-full bg-sage/65 blur-3xl" aria-hidden="true" />
+          <div className="container grid min-h-[690px] items-center gap-12 py-12 lg:grid-cols-[1.04fr_0.96fr] lg:gap-16 lg:py-16">
             <div className="section-reveal relative z-10 max-w-2xl py-4 lg:py-12">
               <p className="eyebrow flex items-center gap-2">
                 <Sparkles aria-hidden="true" className="h-4 w-4 text-coral-deep" />
                 Pediatrics · Savannah, Georgia
               </p>
-              <h1 className="mt-6 max-w-[13ch] font-display text-[clamp(3.25rem,7vw,6.8rem)] font-semibold leading-[0.91] tracking-[-0.055em] text-live-oak">
-                Care that knows your child—<em className="font-normal text-coral-deep">and remembers</em> your family.
+              <h1 className="mt-6 max-w-[12ch] font-display text-[clamp(3rem,6.3vw,6.25rem)] font-semibold leading-[0.92] tracking-[-0.055em] text-live-oak">
+                Meet Dr. W. Esther McAlpine—<em className="font-normal text-coral-deep">the steady heart</em> families remember.
               </h1>
               <p className="mt-7 max-w-xl text-lg leading-8 text-foreground/72 sm:text-xl">
-                Relationship-centered pediatric care for infants, children, and adolescents, led by Dr. W. Esther McAlpine—Savannah’s first Black woman pediatrician.
+                For more than five decades, Savannah’s first Black woman pediatrician has cared for infants, children, adolescents, and the families growing alongside them.
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <a
@@ -75,26 +76,36 @@ export default function Home() {
               </div>
               <div className="mt-8 flex items-center gap-3 border-t border-live-oak/15 pt-5 text-sm font-semibold leading-6 text-live-oak/72">
                 <span className="h-2.5 w-2.5 shrink-0 rounded-full bg-coral" aria-hidden="true" />
-                More than five decades of pediatric experience, offered one family at a time.
+                Relationship-centered care, offered one family at a time.
               </div>
             </div>
 
-            <div className="section-reveal section-reveal-delay relative mx-auto w-full max-w-3xl lg:mx-0">
-              <div className="absolute -right-7 -top-5 hidden h-28 w-28 rounded-full border border-coral/35 lg:block" aria-hidden="true" />
-              <div className="arch-frame relative aspect-[4/4.55] overflow-hidden bg-sage shadow-[0_32px_90px_rgba(23,63,58,0.20)] sm:aspect-[4/3.7] lg:aspect-[4/4.65]">
-                <img
-                  src="/manus-storage/mcalpine-open-porch-hero_bc50a773.jpg"
-                  alt="A mother and young daughter arriving at a bright pediatric office"
-                  className="h-full w-full object-cover object-center"
-                  fetchPriority="high"
-                />
-                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-live-oak/78 via-live-oak/20 to-transparent px-6 pb-7 pt-24 text-white sm:px-8">
-                  <p className="max-w-sm font-display text-2xl font-medium leading-tight sm:text-3xl">A calm place for questions, milestones, and growing up.</p>
-                </div>
+            <div className="section-reveal section-reveal-delay mx-auto w-full max-w-[38rem] lg:mx-0">
+              <div className="relative isolate mx-auto aspect-square w-full max-w-[36rem]">
+                <div className="absolute inset-[2%] translate-x-[4%] translate-y-[4%] rounded-full bg-coral" aria-hidden="true" />
+                <div className="absolute -inset-[3%] rounded-full border border-coral/35" aria-hidden="true" />
+                <div className="absolute -right-[4%] top-[4%] h-[24%] w-[24%] rounded-full border border-live-oak/18 bg-porch/55" aria-hidden="true" />
+                <figure className="relative h-full w-full overflow-hidden rounded-full border-[10px] border-white bg-sage shadow-[0_34px_90px_rgba(23,63,58,0.22)]">
+                  <img
+                    src="/manus-storage/mcalpine-portrait-stethoscope_e83fd3c3.png"
+                    alt="Dr. W. Esther McAlpine smiling outdoors in a pink blouse with a stethoscope"
+                    className="h-full w-full object-cover object-[50%_48%]"
+                    fetchPriority="high"
+                  />
+                </figure>
               </div>
-              <div className="absolute -bottom-6 -left-2 max-w-[230px] rounded-2xl border border-live-oak/10 bg-white p-4 shadow-[0_16px_40px_rgba(23,63,58,0.18)] sm:-left-8 sm:max-w-[260px] sm:p-5">
-                <p className="eyebrow">A Savannah first</p>
-                <p className="mt-2 font-display text-xl font-semibold leading-tight text-live-oak">Pioneering care. Enduring presence.</p>
+              <div className="mt-7 grid gap-4 border-y border-live-oak/18 py-5 sm:grid-cols-[1.2fr_0.8fr] sm:items-center sm:gap-6">
+                <div className="flex items-center gap-4">
+                  <img src="/manus-storage/mcalpine-heart-sprout-mark_73e5720e.png" alt="" className="h-11 w-11 shrink-0 object-contain" />
+                  <div>
+                    <p className="eyebrow">W. Esther McAlpine, M.D.</p>
+                    <p className="mt-1 font-display text-xl font-semibold leading-tight text-live-oak">Pioneering care. Enduring presence.</p>
+                  </div>
+                </div>
+                <div className="border-live-oak/15 sm:border-l sm:pl-6">
+                  <p className="text-xs font-extrabold uppercase tracking-[0.16em] text-foreground/50">A Savannah first</p>
+                  <p className="mt-1 text-sm font-bold text-live-oak">50+ years in medicine</p>
+                </div>
               </div>
             </div>
           </div>
@@ -125,23 +136,32 @@ export default function Home() {
 
         <section id="about" className="scroll-mt-24 bg-porch py-20 sm:py-28">
           <div className="container grid items-center gap-14 lg:grid-cols-[0.82fr_1.18fr] lg:gap-20">
-            <div className="relative">
-              <div className="overflow-hidden rounded-[2rem_7rem_2rem_2rem] bg-sage shadow-[0_28px_70px_rgba(23,63,58,0.14)]">
-                <img
-                  src="/manus-storage/mcalpine-care-scene_f8679a6b.png"
-                  alt="Representative image of a mother and young child during a warm pediatric visit"
-                  className="aspect-[4/3.45] h-full w-full object-cover object-[72%_center]"
-                  loading="lazy"
-                />
+            <div className="mx-auto w-full max-w-lg">
+              <div className="relative mx-auto max-w-[28rem]">
+                <div className="absolute -inset-3 translate-x-4 translate-y-4 rounded-[48%_48%_2rem_2rem] bg-coral" aria-hidden="true" />
+                <figure className="relative overflow-hidden rounded-[48%_48%_2rem_2rem] border-[8px] border-white bg-sage shadow-[0_28px_70px_rgba(23,63,58,0.16)]">
+                  <img
+                    src="/manus-storage/mcalpine-portrait-original_f9db1b16.webp"
+                    alt="Dr. W. Esther McAlpine smiling outdoors in a pink blouse"
+                    className="aspect-[4/5] h-full w-full object-cover object-[50%_28%]"
+                    loading="lazy"
+                  />
+                </figure>
               </div>
-              <div className="absolute -bottom-8 right-4 rounded-2xl bg-live-oak px-5 py-4 text-white shadow-xl sm:right-8">
-                <p className="font-display text-4xl font-semibold text-coral">50+</p>
-                <p className="mt-1 text-xs font-bold uppercase tracking-[0.16em] text-white/75">years in medicine</p>
+              <div className="mt-8 grid grid-cols-2 divide-x divide-live-oak/15 border-y border-live-oak/15 py-4 text-center">
+                <div className="px-3">
+                  <p className="font-display text-3xl font-semibold text-coral-deep">50+</p>
+                  <p className="mt-1 text-xs font-bold uppercase tracking-[0.13em] text-live-oak/65">years in medicine</p>
+                </div>
+                <div className="px-3">
+                  <p className="font-display text-3xl font-semibold text-live-oak">1974</p>
+                  <p className="mt-1 text-xs font-bold uppercase tracking-[0.13em] text-live-oak/65">medical degree</p>
+                </div>
               </div>
             </div>
 
             <div>
-              <p className="eyebrow">Meet Dr. McAlpine</p>
+              <p className="eyebrow">Meet Dr. W. Esther McAlpine</p>
               <h2 className="mt-5 max-w-[13ch] font-display text-4xl font-semibold leading-[1.02] tracking-[-0.035em] text-live-oak sm:text-6xl">
                 A Savannah first. A family constant.
               </h2>

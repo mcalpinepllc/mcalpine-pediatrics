@@ -6,7 +6,7 @@
 
 ## Publication Gate
 
-The draft uses public professional profiles for education, specialty, address, telephone, fax, and directory-listed insurance information. The statement that Dr. McAlpine is Savannah’s first Black woman pediatrician came from the client brief and requires independent practice confirmation before publication. No authenticated, reusable public portrait was located; the supplied photographs are representative brand imagery rather than images of Dr. McAlpine.[1] [2] [3]
+The draft uses public professional profiles for education, specialty, address, telephone, fax, and directory-listed insurance information. The statement that Dr. McAlpine is Savannah’s first Black woman pediatrician came from the client brief and requires independent practice confirmation before publication. The principal portrait was supplied directly by the client, and the stethoscope version is a requested derivative of that image.[1] [2] [3]
 
 | Required confirmation | Current draft | Practice approval |
 | --- | --- | --- |
@@ -80,7 +80,9 @@ Squarespace’s launch guidance recommends checking the site title, logo, favico
 | --- | --- |
 | Biography is approved by Dr. McAlpine or an authorized practice representative | ☐ |
 | Every factual statement has been reviewed | ☐ |
-| Representative imagery is not labeled as Dr. McAlpine | ☐ |
+| The practice confirms permission to publish the client-supplied portrait | ☐ |
+| The practice approves the derivative portrait with the added stethoscope | ☐ |
+| Representative family imagery is not labeled as Dr. McAlpine or her patients | ☐ |
 | Telephone and fax numbers have been tested | ☐ |
 | Directions open the correct building and suite | ☐ |
 | Privacy, accessibility, nondiscrimination, and financial-policy links are present as required | ☐ |
@@ -96,4 +98,3 @@ Squarespace’s launch guidance recommends checking the site title, logo, favico
 [3]: https://www.sjchs.org/find-a-physician/physician-details/w-e-mcalpine-md "St. Joseph’s/Candler — W. E. McAlpine, MD"
 [4]: https://help.acuityscheduling.com/hc/en-us/articles/16676884389133-Adding-Acuity-Scheduling-to-your-website "Acuity Scheduling Help — Adding Acuity Scheduling to your website"
 [5]: https://support.squarespace.com/hc/en-us/articles/360022518252-Site-launch-checklist "Squarespace Help Center — Site launch checklist"
-

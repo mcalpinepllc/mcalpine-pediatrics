@@ -54,11 +54,13 @@ Coral should remain precious: use it for scheduling, selected controls, the arch
 | File | Squarespace use | Alternative text |
 | --- | --- | --- |
 | `mcalpine-heart-sprout-mark.png` | Header logo mark and favicon source | Leave blank when adjacent text already names the practice |
-| `mcalpine-open-porch-hero.jpg` | Homepage hero | “A mother and young daughter arriving at a bright pediatric office” |
-| `mcalpine-care-scene.png` | Biography section | “Representative image of a mother and young child during a warm pediatric visit” |
+| `mcalpine-portrait-stethoscope.png` | Circular homepage hero | “Dr. W. Esther McAlpine smiling outdoors in a pink blouse with a stethoscope” |
+| `mcalpine-portrait-original.webp` | Biography portrait | “Dr. W. Esther McAlpine smiling outdoors in a pink blouse” |
+| `mcalpine-open-porch-hero.jpg` | Optional supporting family image | “A mother and young daughter arriving at a bright pediatric office” |
+| `mcalpine-care-scene.png` | Optional supporting care image | “Representative image of a mother and young child during a warm pediatric visit” |
 | `mcalpine-community-children.png` | Community section | “A diverse group of children playing together beneath live oak trees in a Savannah square” |
 
-The three photographs are representative brand imagery and must not be captioned or described as photographs of Dr. McAlpine. No reusable, authenticated public portrait was found during research.
+The authentic portrait was supplied directly by the client. The stethoscope version is an approved derivative created from that supplied photograph; the face, expression, clothing, and setting were preserved while the stethoscope was added at the client’s request. The remaining family and community photographs are representative brand imagery and must not be described as photographs of Dr. McAlpine or her patients.
 
 ## Step-by-Step Squarespace Build
 
@@ -81,9 +83,13 @@ Use only one marker per section. Set navigation links to `/#about`, `/#care`, `/
 
 ### 3. Recreate the Hero
 
-Use a two-column Fluid Engine section. Place the text on the left and the hero image on the right. Keep the heading left aligned and preserve its line breaks:
+Use a two-column Fluid Engine section. Place the text on the left and Dr. McAlpine’s circular portrait on the right. Keep all caption text below the photograph so nothing covers her face, clothing, stethoscope, or supporting copy. Preserve the left-aligned headline:
 
 > Care that knows your child—*and remembers* your family.
+
+Replace that earlier reference line with the approved portrait-led copy:
+
+> Meet Dr. W. Esther McAlpine—*the steady heart* families remember.
 
 Use **Schedule a visit** as the primary coral button and **Call (912) 349-3682** as the secondary outlined button. On mobile, stack the copy above the image and keep both actions visible without horizontal scrolling.
 
