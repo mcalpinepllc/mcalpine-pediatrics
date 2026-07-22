@@ -60,7 +60,7 @@
 - [x] Test previous, next, and keyboard left/right carousel navigation after the latest slide changes.
 - [x] Verify visible keyboard focus states for carousel controls at desktop and mobile breakpoints.
 - [x] Make the carousel region focusable so its documented left/right keyboard controls work from the gallery itself.
-- [ ] Save and publish a checkpoint, then deliver the revised picture roll within the user’s brief update budget.
+- [x] Save and publish a checkpoint, then deliver the revised picture roll within the user’s brief update budget.
 
 ## Biography and Telemedicine Revision
 
@@ -71,7 +71,7 @@
 - [x] Ensure the Doxy.me modal explains the external handoff, avoids collecting clinical details, and provides a clear continue action.
 - [x] Validate portal authentication states, modal keyboard behavior, external launch, responsive styling, tests, and production build.
 - [x] Verify final unauthenticated and authenticated portal render states, including sign-in boundary messaging, notice area, Doxy.me entry, and dark-green Patient Portal navigation CTAs.
-- [ ] Save and publish the combined biography, portal, and picture-roll checkpoint, then deliver within the 500-token update budget.
+- [x] Save and publish the combined biography, portal, and picture-roll checkpoint, then deliver within the 500-token update budget.
 
 ## Cross-Service Migration Guide
 
@@ -102,3 +102,11 @@
 - [x] Verify the authenticated notice area, Doxy.me entry, and portal-responsive layout after the redirect fix.
 - [x] Open the authenticated Doxy.me modal and verify focus behavior plus cancel and continue controls.
 - [x] Verify visible previous, next, and dot-control focus states at desktop and mobile carousel breakpoints.
+
+## Patient Review Placement
+
+- [x] Move the “Highly Rated / Patient reviews / WebMD | RateMD” block directly below the “50+ years in medicine / 1974 medical degree” statistics.
+- [x] Remove the former full-width review block below the gallery without changing either external review URL or adding a fixed rating.
+- [x] Verify the biography column and review block at desktop and mobile widths.
+- [x] Run the Vitest suite and production build for the revised layout.
+- [ ] Save and auto-publish a checkpoint containing the patient-review placement change.

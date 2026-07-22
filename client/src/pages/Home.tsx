@@ -159,6 +159,15 @@ export default function Home() {
                   <p className="mt-1 text-xs font-bold uppercase tracking-[0.13em] text-live-oak/65">medical degree</p>
                 </div>
               </div>
+              <div className="border-b border-live-oak/15 py-6 text-center">
+                <p className="eyebrow">Highly Rated</p>
+                <p className="mt-3 font-display text-2xl font-semibold text-live-oak">Patient reviews</p>
+                <div className="mt-4 flex flex-wrap items-center justify-center gap-3 text-sm font-bold">
+                  <a href="https://doctor.webmd.com/doctor/w-mcalpine-acf8ed74-c0e9-4925-9d84-8694a6e725dc-overview" target="_blank" rel="noreferrer" className="text-live-oak underline decoration-coral decoration-2 underline-offset-4 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-coral/35">WebMD</a>
+                  <span aria-hidden="true" className="text-live-oak/35">|</span>
+                  <a href="https://www.ratemds.com/doctor-ratings/424258/Dr-W-McAlpine-Savannah-GA.html/" target="_blank" rel="noreferrer" className="text-live-oak underline decoration-coral decoration-2 underline-offset-4 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-coral/35">RateMD</a>
+                </div>
+              </div>
             </div>
 
             <div>
@@ -196,16 +205,6 @@ export default function Home() {
           </div>
           <div className="container mt-16 sm:mt-20">
             <McAlpineStoryCarousel />
-
-            <div className="mt-10 border-y border-live-oak/15 py-7 text-center">
-              <p className="eyebrow">Highly Rated</p>
-              <p className="mt-3 font-display text-2xl font-semibold text-live-oak">Patient reviews</p>
-              <div className="mt-4 flex flex-wrap items-center justify-center gap-3 text-sm font-bold">
-                <a href="https://doctor.webmd.com/doctor/w-mcalpine-acf8ed74-c0e9-4925-9d84-8694a6e725dc-overview" target="_blank" rel="noreferrer" className="text-live-oak underline decoration-coral decoration-2 underline-offset-4 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-coral/35">WebMD</a>
-                <span aria-hidden="true" className="text-live-oak/35">|</span>
-                <a href="https://www.ratemds.com/doctor-ratings/424258/Dr-W-McAlpine-Savannah-GA.html/" target="_blank" rel="noreferrer" className="text-live-oak underline decoration-coral decoration-2 underline-offset-4 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-coral/35">RateMD</a>
-              </div>
-            </div>
           </div>
         </section>
 
