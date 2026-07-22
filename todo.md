@@ -16,7 +16,7 @@
 - [x] Move the circular stethoscope portrait to the Meet Dr. McAlpine section.
 - [x] Remove the non-stethoscope portrait from the page and image manifest.
 - [x] Verify responsive crops, alternative text, heading hierarchy, and all appointment actions.
-- [ ] Run final checks, save a checkpoint, and deliver the revised site.
+- [x] Run final checks, save a checkpoint, and deliver the revised site.
 
 ## Hours, Telehealth, Slideshow, and Patient Portal
 
@@ -35,8 +35,8 @@
 - [x] Verify the client-supplied professional biography claims against accessible primary or authoritative public sources before publication; document unsupported items and keep them explicitly attributed rather than independently asserted.
 - [x] Verify and add a concise global-health blurb describing the client-confirmed 30+ years of Medical Wings International service in Thailand, India, Senegal, and other mission locations, with careful source attribution.
 - [x] Verify authorization behavior, notice privacy boundaries, accessibility, responsive layout, and production build.
-- [ ] Update the Squarespace handoff and prepublication checklist, then save and deliver a checkpoint.
-- [ ] Keep the final project update within 600 tokens and limit it to essential outcomes, caveats, and next steps.
+- [x] Update the Squarespace handoff and prepublication checklist, then save and deliver a checkpoint.
+- [x] Keep the final project update within 600 tokens and limit it to essential outcomes, caveats, and next steps.
 - [x] Independently verify or explicitly attribute the “Savannah’s first Black woman pediatrician” claim before publication.
 - [x] Attribute residency and teaching details to Dr. McAlpine’s publicly indexed professional profile unless an accessible institutional source is obtained.
 - [x] Limit published biography copy to verified facts or explicit practice/profile attribution and disclose where the accessible public record does not confirm the full client-supplied history.
