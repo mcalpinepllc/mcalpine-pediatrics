@@ -9,9 +9,9 @@ import { useState } from "react";
 const links = [
   { href: "#about", label: "Meet Dr. McAlpine" },
   { href: "#care", label: "Care" },
-  { href: "#insurance", label: "Insurance & co-pay" },
+  { href: "#insurance", label: "Insurance & Co-Pay" },
   { href: "#visit", label: "Visit" },
-  { href: "/portal", label: "Patient portal" },
+  { href: "/portal", label: "Patient Portal" },
 ];
 
 export default function SiteHeader() {
@@ -46,7 +46,7 @@ export default function SiteHeader() {
             <a
               key={link.href}
               href={link.href}
-              className="rounded-sm px-1 py-2 text-sm font-semibold text-live-oak/80 underline-offset-8 transition-colors duration-200 hover:text-coral-deep hover:underline focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-coral/35"
+              className={link.href === "/portal" ? "button-press rounded-full bg-live-oak px-4 py-2.5 text-sm font-bold text-white shadow-[0_8px_20px_rgba(23,63,58,0.18)] transition hover:bg-coral-deep focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-coral/35" : "rounded-sm px-1 py-2 text-sm font-semibold text-live-oak/80 underline-offset-8 transition-colors duration-200 hover:text-coral-deep hover:underline focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-coral/35"}
             >
               {link.label}
             </a>
@@ -85,7 +85,7 @@ export default function SiteHeader() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="rounded-xl px-4 py-3.5 text-base font-bold text-live-oak hover:bg-sage focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-coral/35"
+                className={link.href === "/portal" ? "rounded-xl bg-live-oak px-4 py-3.5 text-center text-base font-bold text-white hover:bg-coral-deep focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-coral/35" : "rounded-xl px-4 py-3.5 text-base font-bold text-live-oak hover:bg-sage focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-coral/35"}
               >
                 {link.label}
               </a>

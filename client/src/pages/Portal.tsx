@@ -2,6 +2,16 @@ import { useAuth } from "@/_core/hooks/useAuth";
 import { startLogin } from "@/const";
 import { trpc } from "@/lib/trpc";
 import {
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import {
   ArrowLeft,
   Bell,
   Check,
@@ -68,7 +78,7 @@ export default function Portal() {
             <p className="eyebrow">A simple, private doorway</p>
             <h1 className="mt-5 max-w-[11ch] font-display text-5xl font-semibold leading-[0.98] tracking-[-0.04em] text-live-oak sm:text-7xl">Practice notices and telehealth, in one place.</h1>
             <p className="mt-7 max-w-xl text-lg leading-8 text-foreground/70">Sign in to read general practice updates and continue to Dr. McAlpine’s Doxy.me waiting room. This portal does not collect medical records, symptoms, diagnoses, or clinical messages.</p>
-            <button type="button" onClick={() => startLogin()} className="button-press mt-8 inline-flex min-h-13 items-center justify-center gap-2 rounded-full bg-coral-deep px-7 py-3.5 font-bold text-white shadow-[0_12px_30px_rgba(184,72,52,0.22)] transition hover:bg-live-oak focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-coral/35">
+            <button type="button" onClick={() => startLogin("/portal")} className="button-press mt-8 inline-flex min-h-13 items-center justify-center gap-2 rounded-full bg-coral-deep px-7 py-3.5 font-bold text-white shadow-[0_12px_30px_rgba(184,72,52,0.22)] transition hover:bg-live-oak focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-coral/35">
               <LockKeyhole aria-hidden="true" className="h-5 w-5" />
               Sign in to the portal
             </button>
@@ -164,11 +174,30 @@ export default function Portal() {
               <p className="eyebrow mt-7 text-coral">Friday telehealth</p>
               <h2 className="mt-3 font-display text-3xl font-semibold">Visit Dr. McAlpine on Doxy.me.</h2>
               <p className="mt-4 text-sm leading-7 text-white/70">By appointment, Friday from 10:00 AM–12:00 PM. Doxy.me opens outside this website and handles the telehealth visit.</p>
-              <button type="button" onClick={() => void launchTelehealth()} disabled={telehealth.isPending} className="button-press mt-7 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-coral px-5 font-bold text-white transition hover:bg-white hover:text-live-oak focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white/45 disabled:opacity-60">
-                {telehealth.isPending ? <Loader2 aria-hidden="true" className="h-4 w-4 animate-spin" /> : <ExternalLink aria-hidden="true" className="h-4 w-4" />}
-                Open Doxy.me waiting room
-              </button>
-              {telehealth.error ? <p role="alert" className="mt-3 text-sm font-semibold text-white">The handoff did not open. Please call (912) 349-3682.</p> : null}
+              <Dialog>
+                <DialogTrigger asChild>
+                  <button type="button" className="button-press mt-7 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-coral px-5 font-bold text-white transition hover:bg-white hover:text-live-oak focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white/45">
+                    <Video aria-hidden="true" className="h-4 w-4" />
+                    Start telemedicine session
+                  </button>
+                </DialogTrigger>
+                <DialogContent className="border-live-oak/15 bg-porch text-foreground sm:max-w-xl">
+                  <DialogHeader>
+                    <DialogTitle className="font-display text-3xl font-semibold text-live-oak">Continue to Dr. McAlpine’s Doxy.me waiting room?</DialogTitle>
+                    <DialogDescription className="pt-2 text-sm leading-7 text-foreground/68">Your visit takes place on Doxy.me, outside this patient portal. Doxy.me may request your name and permission to use your camera and microphone. Do not enter symptoms or other medical details on this website.</DialogDescription>
+                  </DialogHeader>
+                  {telehealth.error ? <p role="alert" className="rounded-2xl bg-coral-soft p-4 text-sm font-semibold text-coral-deep">The handoff did not open. Please call (912) 349-3682.</p> : null}
+                  <DialogFooter className="mt-3">
+                    <DialogClose asChild>
+                      <button type="button" className="inline-flex min-h-11 items-center justify-center rounded-full border border-live-oak/18 bg-white px-5 font-bold text-live-oak focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-coral/35">Not now</button>
+                    </DialogClose>
+                    <button type="button" onClick={() => void launchTelehealth()} disabled={telehealth.isPending} className="button-press inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-live-oak px-5 font-bold text-white transition hover:bg-coral-deep focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-coral/35 disabled:opacity-60">
+                      {telehealth.isPending ? <Loader2 aria-hidden="true" className="h-4 w-4 animate-spin" /> : <ExternalLink aria-hidden="true" className="h-4 w-4" />}
+                      Continue to Doxy.me
+                    </button>
+                  </DialogFooter>
+                </DialogContent>
+              </Dialog>
             </div>
             <div className="mt-5 rounded-3xl border border-live-oak/12 bg-white p-6">
               <p className="flex items-center gap-2 font-bold text-live-oak"><ShieldCheck aria-hidden="true" className="h-5 w-5 text-coral-deep" />Privacy boundary</p>

@@ -11,6 +11,7 @@ import {
   Building2,
   CalendarCheck,
   Clock3,
+  Linkedin,
   MapPin,
   Phone,
   ShieldCheck,
@@ -58,7 +59,7 @@ export default function Home() {
                 Meet Dr. W. Esther McAlpine—<em className="font-normal text-coral-deep">the steady heart</em> families remember.
               </h1>
               <p className="mt-7 max-w-xl text-lg leading-8 text-foreground/72 sm:text-xl">
-                Relationship-centered pediatric care for infants, children, and adolescents, led by Dr. W. Esther McAlpine—a physician the practice honors as Savannah’s first Black woman pediatrician.
+                Relationship-centered pediatric care for infants, children, and adolescents, led by Dr. W. Esther McAlpine - a physician honored to be Savannah's first Black woman pediatrician.
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <a
@@ -141,7 +142,7 @@ export default function Home() {
                 <div className="absolute -left-[4%] bottom-[7%] h-[22%] w-[22%] rounded-full border border-live-oak/18 bg-porch/60" aria-hidden="true" />
                 <figure className="relative h-full w-full overflow-hidden rounded-full border-[10px] border-white bg-sage shadow-[0_28px_70px_rgba(23,63,58,0.18)]">
                   <img
-                    src="/manus-storage/mcalpine-portrait-stethoscope_e83fd3c3.png"
+                    src="/manus-storage/mcalpine-portrait-stethoscope-no-man_efbbb930.png"
                     alt="Dr. W. Esther McAlpine smiling outdoors in a pink blouse with a stethoscope"
                     className="h-full w-full object-cover object-[50%_48%]"
                     loading="lazy"
@@ -171,15 +172,22 @@ export default function Home() {
                   Dr. Willie Esther McAlpine has cared for Savannah children across generations. After earning her medical degree from Case Western Reserve University School of Medicine in 1974, she built a career in pediatrics shaped by clinical practice, medical education, and community service.
                 </p>
                 <p>
-                  Her publicly indexed professional profile lists a pediatrics residency at Emory University School of Medicine from 1975–1977, a Clinical Assistant Professorship at Mercer University School of Medicine, and long-running clinical-preceptor service associated with the Medical College of Georgia. Public physician directories also identify her pediatrics practice and Savannah-area hospital affiliations.
+                  Her publicly indexed professional profile identifies a pediatrics residency at Emory University School of Medicine from 1975–1977 and teaching roles with Mercer University School of Medicine and the Medical College of Georgia.
                 </p>
-                <p>
-                  The practice describes more than 30 years of international health service in Thailand, India, Senegal, Honduras, South Africa, and other communities. Medical Wings International’s current public record confirms its global mission work and recent service in Honduras, but it does not archive Dr. McAlpine’s complete personal service history.
-                </p>
+                <p>Visitors to the site can also find her listed on several physician directories and find her hospital affiliations.</p>
                 <p className="font-display text-2xl font-medium italic leading-9 text-coral-deep">
                   Part physician, part teacher, and—across the community—the steady heart families remember.
                 </p>
               </div>
+              <a
+                href="https://www.linkedin.com/in/w-esther-mcalpine-md-b7718919"
+                target="_blank"
+                rel="noreferrer"
+                className="mt-7 inline-flex min-h-11 items-center gap-2 rounded-full border border-live-oak/18 bg-white px-5 font-bold text-live-oak transition hover:bg-sage focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-coral/35"
+              >
+                <Linkedin aria-hidden="true" className="h-4 w-4" />
+                Learn More on LinkedIn
+              </a>
               <a href="#schedule" className="mt-8 inline-flex items-center gap-2 rounded-sm font-bold text-live-oak underline decoration-coral decoration-2 underline-offset-8 transition hover:text-coral-deep focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-coral/35">
                 Plan a visit with the practice
                 <ArrowRight aria-hidden="true" className="h-4 w-4" />
@@ -188,6 +196,16 @@ export default function Home() {
           </div>
           <div className="container mt-16 sm:mt-20">
             <McAlpineStoryCarousel />
+
+            <div className="mt-10 border-y border-live-oak/15 py-7 text-center">
+              <p className="eyebrow">Highly Rated</p>
+              <p className="mt-3 font-display text-2xl font-semibold text-live-oak">Patient reviews</p>
+              <div className="mt-4 flex flex-wrap items-center justify-center gap-3 text-sm font-bold">
+                <a href="https://doctor.webmd.com/doctor/w-mcalpine-acf8ed74-c0e9-4925-9d84-8694a6e725dc-overview" target="_blank" rel="noreferrer" className="text-live-oak underline decoration-coral decoration-2 underline-offset-4 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-coral/35">WebMD</a>
+                <span aria-hidden="true" className="text-live-oak/35">|</span>
+                <a href="https://www.ratemds.com/doctor-ratings/424258/Dr-W-McAlpine-Savannah-GA.html/" target="_blank" rel="noreferrer" className="text-live-oak underline decoration-coral decoration-2 underline-offset-4 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-coral/35">RateMD</a>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -303,7 +321,9 @@ export default function Home() {
                   </span>
                   <div>
                     <dt className="text-xs font-bold uppercase tracking-[0.16em] text-foreground/50">Office</dt>
-                    <dd className="mt-2 font-bold leading-7 text-live-oak">340 Eisenhower Drive<br />Building 700, Suite 740<br />Savannah, GA 31406</dd>
+                    <dd className="mt-2 font-bold leading-7 text-live-oak">
+                      <a href="https://www.google.com/maps/search/?api=1&query=340+Eisenhower+Drive+Building+700+Suite+740+Savannah+GA+31406" target="_blank" rel="noreferrer" className="underline decoration-coral decoration-2 underline-offset-4 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-coral/35">340 Eisenhower Drive<br />Building 700, Suite 740<br />Savannah, GA 31406</a>
+                    </dd>
                   </div>
                 </div>
                 <div className="flex gap-4">
@@ -314,7 +334,18 @@ export default function Home() {
                     <dt className="text-xs font-bold uppercase tracking-[0.16em] text-foreground/50">Phone & fax</dt>
                     <dd className="mt-2 leading-7">
                       <a href="tel:+19123493682" className="block font-bold text-live-oak underline decoration-coral decoration-2 underline-offset-4 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-coral/35">(912) 349-3682</a>
-                      <span className="text-sm text-foreground/65">Fax: (912) 349-3683</span>
+                      <span className="text-sm text-foreground/65">Fax: 914.222.8923</span>
+                    </dd>
+                  </div>
+                </div>
+                <div className="flex gap-4">
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-coral-soft text-coral-deep">
+                    <Linkedin aria-hidden="true" className="h-5 w-5" />
+                  </span>
+                  <div>
+                    <dt className="text-xs font-bold uppercase tracking-[0.16em] text-foreground/50">LinkedIn</dt>
+                    <dd className="mt-2 leading-7">
+                      <a href="https://www.linkedin.com/in/w-esther-mcalpine-md-b7718919" target="_blank" rel="noreferrer" className="font-bold text-live-oak underline decoration-coral decoration-2 underline-offset-4 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-coral/35">LinkedIn</a>
                     </dd>
                   </div>
                 </div>
