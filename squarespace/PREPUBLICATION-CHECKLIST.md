@@ -12,7 +12,7 @@ This checklist records launch decisions; it is not a representation that the web
 | [ ] | Confirm the practice name, address, suite, telephone, fax, and directions link. | Practice owner |
 | [ ] | Confirm office hours: Monday, Tuesday, and Thursday, 10:00 AM–12:00 PM and 1:00 PM–5:00 PM. | Practice owner |
 | [ ] | Confirm Friday telehealth is by appointment from 10:00 AM–12:00 PM. | Practice owner |
-| [ ] | Approve the phrasing “a physician the practice honors as Savannah’s first Black woman pediatrician,” or supply an independent authoritative source for a stronger factual formulation. | Practice owner / counsel |
+| [ ] | Approve the published phrasing “a physician honored to be Savannah’s first Black woman pediatrician.” | Practice owner / counsel |
 | [ ] | Approve the residency and teaching details as attributed to Dr. McAlpine’s publicly indexed professional profile. | Dr. McAlpine / practice owner |
 | [ ] | Approve the practice-supplied international-service history and the accompanying public-record limitation. | Dr. McAlpine / practice owner |
 | [ ] | Confirm that every client-supplied slideshow photograph may be published and that each caption and alternative text is accurate. | Rights holder / practice owner |

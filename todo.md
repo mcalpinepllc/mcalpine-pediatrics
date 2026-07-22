@@ -75,11 +75,13 @@
 
 ## Cross-Service Migration Guide
 
-- [ ] Create a self-contained Markdown guide for porting the complete website to another development or hosting service.
-- [ ] Inventory the stack, routes, page sections, database schema, authentication, portal, Doxy.me handoff, assets, environment variables, tests, and deployment commands.
-- [ ] Distinguish portable application code from Manus-specific authentication, storage, APIs, analytics, and hosting behavior.
-- [ ] Provide a practical migration sequence, replacement options, security/privacy requirements, acceptance tests, and launch checklist.
-- [ ] Validate all project paths and references, then attach the finished Markdown file directly to the user.
+- [x] Create a self-contained Markdown guide for porting the complete website to another development or hosting service.
+- [x] Inventory the stack, routes, page sections, database schema, authentication, portal, Doxy.me handoff, assets, environment variables, tests, and deployment commands.
+- [x] Distinguish portable application code from Manus-specific authentication, storage, APIs, analytics, and hosting behavior.
+- [x] Provide a practical migration sequence, replacement options, security/privacy requirements, acceptance tests, and launch checklist.
+- [x] Validate all project paths and references in the finished Markdown guide.
+- [ ] Save and auto-publish a checkpoint containing the guide and aligned supporting handoff documents.
+- [ ] Attach the finished `docs/CROSS-SERVICE-MIGRATION-GUIDE.md` directly to the user.
 
 ## Focused Final Site Edits
 
@@ -109,4 +111,4 @@
 - [x] Remove the former full-width review block below the gallery without changing either external review URL or adding a fixed rating.
 - [x] Verify the biography column and review block at desktop and mobile widths.
 - [x] Run the Vitest suite and production build for the revised layout.
-- [ ] Save and auto-publish a checkpoint containing the patient-review placement change.
+- [x] Save and auto-publish a checkpoint containing the patient-review placement change.

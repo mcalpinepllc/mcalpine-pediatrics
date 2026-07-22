@@ -14,7 +14,7 @@ The accompanying web project is the approved visual and interaction reference. S
 | Live reference website | Ground truth for layout, pacing, content, and responsive behavior | Recreate with native sections and blocks |
 | `custom.css` | Brand typography, color tokens, buttons, focus states, and anchor behavior | **Website → Pages → Custom Code → Custom CSS**, or the current **Custom CSS** panel |
 | `insurance-planner.html` | Portable, accessible insurance and co-pay planning aid | A **Code** block set to **HTML** |
-| Ten image assets | Logo, hero, portrait, supporting imagery, and five client-supplied slideshow photographs | Squarespace image and logo uploads |
+| Twelve production image assets | Logo, hero, edited portrait, community imagery, and eight gallery photographs; see `docs/CROSS-SERVICE-MIGRATION-GUIDE.md` for permanent source URLs | Squarespace image and logo uploads |
 | `PREPUBLICATION-CHECKLIST.md` | Required clinical, insurance, privacy, and content verification | Complete before making the site public |
 
 > **Important:** The co-pay field is a planning aid. It does not verify benefits, calculate patient responsibility, collect money, or transmit health information. A payment workflow would require a separately approved processor and privacy/security review.
@@ -27,10 +27,10 @@ Keep the public experience intentionally short. Use one primary page with anchor
 | --- | --- | --- |
 | Meet Dr. McAlpine | `#about` | Concise professional biography and the practice’s historical significance |
 | Care | `#care` | Newborn, well-child, sick-visit, school-age, and teen care summaries |
-| Insurance & co-pay | `#insurance` | Plain-language coverage context and the supplied planner |
+| Insurance & Co-Pay | `#insurance` | Plain-language coverage context and the supplied planner |
 | Visit | `#visit` | Address, telephone, fax, directions, and appointment call to action |
 | Schedule a visit | Scheduling block or booking page | Live Squarespace Scheduling/Acuity calendar |
-| Patient portal | External link to the separately hosted application | OAuth sign-in, non-clinical practice notices, and Doxy.me handoff |
+| Patient Portal | External link to the separately hosted application | OAuth sign-in, non-clinical practice notices, and Doxy.me handoff |
 
 Create a footer link for a privacy notice and any practice-required accessibility, nondiscrimination, and financial-policy notices. Do not collect symptoms, diagnoses, medication information, medical records, or other sensitive health details through a general Squarespace form.
 
@@ -52,20 +52,22 @@ Coral should remain precious: use it for scheduling, selected controls, the arch
 
 ## Image Asset Manifest
 
-| File | Squarespace use | Alternative text |
+| Production asset | Squarespace use | Alternative text |
 | --- | --- | --- |
-| `mcalpine-sprouting-heart-a.png` | Header logo mark and favicon source | Leave blank when adjacent text already names the practice |
-| `mcalpine-open-porch-expanded.png` | Homepage hero | “A Black mother and daughter arriving at a bright pediatric office alongside a white mother and her sandy-blonde son” |
-| `mcalpine-portrait-stethoscope.png` | Circular Meet Dr. McAlpine portrait | “Dr. W. Esther McAlpine smiling outdoors in a pink blouse with a stethoscope” |
-| `mcalpine-care-scene.png` | Optional supporting care image | “Representative image of a mother and young child during a warm pediatric visit” |
-| `mcalpine-community-children.png` | Community section | “A diverse group of children playing together beneath live oak trees in a Savannah square” |
-| `mcalpine-honduras.jpg` | Slideshow, photo 1 | “Dr. McAlpine smiling in blue scrubs beneath road signs in Honduras” |
-| `mcalpine-india.jpg` | Slideshow, photo 2 | “Dr. McAlpine with a group of international service travelers in front of the Taj Mahal in India” |
-| `mcalpine-community-event.webp` | Slideshow, photo 3 | “Close-up portrait of Dr. McAlpine smiling beneath a blue canopy at a Chatham County event” |
-| `mcalpine-pink-jacket.webp` | Slideshow, photo 4 | “Dr. McAlpine smiling outdoors in a bright pink jacket” |
-| `mcalpine-historical-portrait.jpg` | Slideshow, photo 5 | “Historical studio portrait of Dr. McAlpine in a teal jacket” |
+| `mcalpine-sprouting-heart-a_851d8ff5.png` | Header logo mark and favicon source | Leave blank when adjacent text already names the practice |
+| `mcalpine-open-porch-expanded_f76bed82.png` | Homepage hero | “A Black mother and daughter arriving at a bright pediatric office alongside a white mother and her sandy-blonde son” |
+| `mcalpine-portrait-stethoscope-no-man_efbbb930.png` | Circular Meet Dr. McAlpine portrait | “Dr. W. Esther McAlpine smiling outdoors in a pink blouse with a stethoscope” |
+| `mcalpine-community-children_aa36a8cd.png` | Community section | “A diverse group of children playing together beneath live oak trees in a Savannah square” |
+| `mcalpine-red-coat-care_460dcba6.jpg` | Gallery, slide 1 | “Dr. McAlpine in a red clinical coat listening to a smiling young child with a stethoscope.” |
+| `mcalpine-honduras_2b0e463e.jpg` | Gallery, slide 2 | “Dr. McAlpine smiling in blue scrubs beneath road signs in Honduras.” |
+| `mcalpine-india_9d514676.jpg` | Gallery, slide 3 | “Dr. McAlpine with fellow physicians in front of the Taj Mahal in India.” |
+| `mcalpine-community-event_f4f608cf.webp` | Gallery, slide 4 | “Dr. McAlpine volunteering for voters beneath a blue canopy in Chatham County.” |
+| `mcalpine-historical-portrait_920b241d.jpg` | Gallery, slide 5 | “Historical studio portrait of Dr. McAlpine in a teal jacket.” |
+| `mcalpine-brown-jacket-portrait_acbeb4c4.jpg` | Gallery, slide 6 | “Earlier portrait of Dr. McAlpine smiling in a brown jacket.” |
+| `mcalpine-thailand-tsunami_00e1c4e8.jpg` | Gallery, slide 7 | “Medical volunteers caring for children at a tsunami-relief clinic in Phuket, Thailand.” |
+| `mcalpine-senegal-outreach_e8d9ceb9.jpg` | Gallery, slide 8 | “Children and volunteers gathered during an outreach visit in Dakar, Senegal.” |
 
-The authentic portrait was supplied directly by the client. The stethoscope version is an approved derivative created from that supplied photograph; the face, expression, clothing, and setting were preserved while the stethoscope was added at the client’s request. The remaining family and community photographs are representative brand imagery and must not be described as photographs of Dr. McAlpine or her patients.
+The portrait was supplied directly by the client and edited at the client’s request to retain Dr. McAlpine while removing a background person. The gallery includes client-supplied historical and service photographs. The hero and community photographs are representative brand imagery and must not be described as photographs of Dr. McAlpine’s patients. Use Section 10 of `docs/CROSS-SERVICE-MIGRATION-GUIDE.md` for permanent source URLs, exact captions, display scaling, positioning, and outbound links.
 
 ## Step-by-Step Squarespace Build
 
@@ -94,7 +96,7 @@ Use a two-column Fluid Engine section. Place the text on the left and the expand
 
 Use the exact approved supporting copy:
 
-> Relationship-centered pediatric care for infants, children, and adolescents, led by Dr. W. Esther McAlpine—a physician the practice honors as Savannah’s first Black woman pediatrician.
+> Relationship-centered pediatric care for infants, children, and adolescents, led by Dr. W. Esther McAlpine—a physician honored to be Savannah’s first Black woman pediatrician.
 
 Use **Schedule a visit** as the primary coral button and **Call (912) 349-3682** as the secondary outlined button. On mobile, stack the copy above the image and keep both actions visible without horizontal scrolling.
 
@@ -102,7 +104,7 @@ Use **Schedule a visit** as the primary coral button and **Call (912) 349-3682**
 
 Use an asymmetric two-column biography layout with the circular portrait, the “50+ years in medicine” inset, and the source-qualified biography. Attribute residency and teaching details to Dr. McAlpine’s publicly indexed professional profile. Present the 30-plus-year international-service history as a practice-supplied account and state that Medical Wings International’s public archive confirms current global mission work and recent service in Honduras but not the complete personal history.
 
-Follow the biography with a five-photograph slideshow using the client-supplied assets in the manifest. It must not auto-advance; provide previous, next, and direct photo controls, a visible “Photo n of 5” position, keyboard operation, and the listed alternative text. Follow it with the deep Live Oak care section containing four service columns. Use headings, not decorative text blocks, so screen-reader users receive a logical document outline.
+Place the neutral **Highly Rated / Patient reviews / WebMD | RateMD** links directly beneath the “50+ years in medicine / 1974 medical degree” statistics without displaying a fixed rating, review count, or testimonial. Follow the biography with the eight-photograph gallery in the manifest. It must not auto-advance; provide previous, next, and direct photo controls, a visible “Photo n of 8” position, keyboard operation, and the listed alternative text. Follow it with the deep Live Oak care section containing four service columns. Use headings, not decorative text blocks, so screen-reader users receive a logical document outline.
 
 ### 5. Add the Insurance Planner
 
@@ -125,7 +127,7 @@ Publish these details only after final practice confirmation:
 | Practice | W. Esther McAlpine, M.D., P.C. |
 | Address | 340 Eisenhower Drive, Building 700, Suite 740, Savannah, GA 31406 |
 | Telephone | (912) 349-3682 |
-| Fax | (912) 349-3683 |
+| Fax | 914.222.8923 |
 | Office hours | Monday, Tuesday, and Thursday, 10:00 AM–12:00 PM and 1:00 PM–5:00 PM |
 | Telehealth | Friday by appointment, 10:00 AM–12:00 PM |
 | Doxy.me check-in | `https://doxy.me/v2/check-in/drmcalpine` |
@@ -158,7 +160,7 @@ Complete `PREPUBLICATION-CHECKLIST.md`, test every telephone, directions, naviga
 | Insurance selector | Shows a cautious public-directory status and entered co-pay amount | Practice must verify all carrier listings |
 | Co-pay entry | Formats a user-entered planning amount | Does not calculate benefits or accept payment |
 | Scheduling preview | Offers Monday, Tuesday, and Thursday office windows plus Friday morning telehealth, then prepares a telephone handoff | Replace with live Squarespace Scheduling/Acuity availability |
-| Biography slideshow | Five client-supplied photographs with manual and direct navigation | Rebuild with an accessible Squarespace gallery or approved custom block |
+| Biography gallery | Eight photographs with manual, keyboard, and direct navigation | Rebuild with an accessible Squarespace gallery or approved custom block |
 | Patient portal | OAuth-gated non-clinical notices and Doxy.me handoff | Keep on the separately hosted full-stack application; do not paste into Squarespace |
 | Eligibility adapter | Disabled interface boundary only | Requires an approved payer or clearinghouse, credentials, agreements, and separate security review before activation |
 | Telephone actions | Opens the device dialer | Confirm telephone number |
