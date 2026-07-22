@@ -190,21 +190,37 @@
 
   .oak-divider {
     position: relative;
-    width: min(260px, 70%);
+    width: min(280px, 72%);
+    height: 18px;
+    color: var(--live-oak);
+  }
+
+  .oak-divider::before {
+    content: "";
+    position: absolute;
+    inset-inline: 0;
+    top: 50%;
     height: 1px;
-    background: color-mix(in oklab, var(--live-oak) 24%, transparent);
+    background: currentColor;
+    opacity: 0.24;
   }
 
   .oak-divider::after {
     content: "";
     position: absolute;
-    right: 0;
-    top: 50%;
-    width: 34px;
-    height: 14px;
+    left: 42%;
+    top: 2px;
+    width: 18px;
+    height: 9px;
     border-radius: 100% 0 100% 0;
-    background: var(--coral);
-    transform: translateY(-50%) rotate(-8deg);
+    background: currentColor;
+    box-shadow: 25px 7px 0 currentColor, 50px -1px 0 currentColor;
+    transform: rotate(-10deg);
+    opacity: 0.46;
+  }
+
+  .oak-divider.is-coral {
+    color: var(--coral);
   }
 
   .paper-ledger,

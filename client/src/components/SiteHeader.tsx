@@ -11,6 +11,7 @@ const links = [
   { href: "#care", label: "Care" },
   { href: "#insurance", label: "Insurance & co-pay" },
   { href: "#visit", label: "Visit" },
+  { href: "/portal", label: "Patient portal" },
 ];
 
 export default function SiteHeader() {
@@ -25,16 +26,17 @@ export default function SiteHeader() {
           aria-label="W. Esther McAlpine, M.D., P.C. home"
         >
           <img
-            src="/manus-storage/mcalpine-heart-sprout-mark_73e5720e.png"
+            src="/manus-storage/mcalpine-sprouting-heart-a_851d8ff5.png"
             alt=""
             className="h-11 w-11 shrink-0 object-contain transition-transform duration-200 group-hover:-rotate-2 group-hover:scale-105 sm:h-12 sm:w-12"
           />
           <span className="min-w-0 leading-none">
-            <span className="block truncate font-display text-[1.15rem] font-semibold tracking-[-0.02em] text-live-oak sm:text-[1.35rem]">
-              W. Esther McAlpine
+            <span className="block truncate font-display text-[1.04rem] tracking-[-0.03em] text-live-oak sm:text-[1.22rem]">
+              <span className="font-medium italic text-coral-deep">W. Esther</span>{" "}
+              <span className="font-semibold">McAlpine</span>
             </span>
-            <span className="mt-1 block truncate text-[0.61rem] font-bold uppercase tracking-[0.2em] text-foreground/65 sm:text-[0.66rem]">
-              M.D., P.C. · Pediatrics
+            <span className="mt-1.5 block truncate text-[0.58rem] font-extrabold uppercase tracking-[0.22em] text-foreground/62 sm:text-[0.63rem]">
+              M.D., P.C. <span className="px-1 text-coral" aria-hidden="true">/</span> Pediatrics
             </span>
           </span>
         </a>

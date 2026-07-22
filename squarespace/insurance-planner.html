@@ -1,8 +1,9 @@
 <!--
   W. Esther McAlpine, M.D., P.C. — portable Squarespace insurance planner.
   Paste this entire file into one Squarespace Code block set to HTML.
-  This planning aid does not verify benefits, calculate responsibility, accept payment,
-  or collect protected health information. Verify every carrier status before publication.
+  This planning aid reads no member data and does not perform real-time eligibility,
+  verify benefits, calculate responsibility, accept payment, or collect health information.
+  Verify every carrier status before publication.
 -->
 <section id="mcalpine-coverage-planner" aria-labelledby="mcalpine-coverage-heading">
   <style>
@@ -167,7 +168,7 @@
       <option value="kaiser">Kaiser Permanente</option>
       <option value="medicaid">Georgia Medicaid / PeachCare for Kids</option>
       <option value="peach">Peach State Health Plan</option>
-      <option value="wellpoint">Wellpoint Georgia</option>
+      <option value="amerigroup">Amerigroup / Wellpoint Georgia</option>
       <option value="caresource">CareSource</option>
       <option value="other">Another plan</option>
     </select>
@@ -179,7 +180,7 @@
   </form>
 
   <div id="mcalpine-coverage-result" role="status" aria-live="polite">
-    <p class="planner-disclaimer">Insurance participation and patient responsibility can change. This tool is a planning aid, not a coverage guarantee.</p>
+    <p class="planner-disclaimer">Insurance participation and patient responsibility can change. This tool reads no member data and performs no real-time eligibility check; it is a planning aid, not a coverage guarantee.</p>
   </div>
 
   <script>
@@ -206,12 +207,12 @@
         card.className = `result-card${listed ? "" : " confirm"}`;
 
         const title = document.createElement("strong");
-        title.textContent = listed ? "Listed in public provider directories" : "Please confirm with the office";
+        title.textContent = listed ? "Directory listing found—not real-time eligibility" : "Please confirm with the office and insurer";
 
         const detail = document.createElement("p");
         detail.textContent = listed
-          ? `Dr. McAlpine appears in public listings for ${option.text}. Network participation still varies by exact plan, employer, and year.`
-          : `We do not have a verified current listing for ${option.text}. This does not mean the plan is declined—the office can check your exact product.`;
+          ? `Dr. McAlpine appears in public listings for ${option.text}. This is not a live eligibility or benefits check; network participation still varies by exact plan, employer, member, and date of service.`
+          : `We do not have a verified current directory listing for ${option.text}. This does not mean the plan is declined. The office and insurer must confirm your exact product, network, eligibility, and benefits.`;
 
         card.append(title, detail);
 

@@ -8,12 +8,17 @@ import NotFound from "@/pages/NotFound";
 import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
+import AdminNotices from "./pages/AdminNotices";
 import Home from "./pages/Home";
+import Portal from "./pages/Portal";
 
 function Router() {
+  // make sure to consider if you need authentication for certain routes
   return (
     <Switch>
       <Route path="/" component={Home} />
+      <Route path="/portal" component={Portal} />
+      <Route path="/admin/notices" component={AdminNotices} />
       <Route path="/404" component={NotFound} />
       <Route component={NotFound} />
     </Switch>

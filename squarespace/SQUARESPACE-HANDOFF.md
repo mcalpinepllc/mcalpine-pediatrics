@@ -14,7 +14,7 @@ The accompanying web project is the approved visual and interaction reference. S
 | Live reference website | Ground truth for layout, pacing, content, and responsive behavior | Recreate with native sections and blocks |
 | `custom.css` | Brand typography, color tokens, buttons, focus states, and anchor behavior | **Website → Pages → Custom Code → Custom CSS**, or the current **Custom CSS** panel |
 | `insurance-planner.html` | Portable, accessible insurance and co-pay planning aid | A **Code** block set to **HTML** |
-| Four optimized image assets | Hero, community imagery, care scene, and logo mark | Squarespace image and logo uploads |
+| Ten image assets | Logo, hero, portrait, supporting imagery, and five client-supplied slideshow photographs | Squarespace image and logo uploads |
 | `PREPUBLICATION-CHECKLIST.md` | Required clinical, insurance, privacy, and content verification | Complete before making the site public |
 
 > **Important:** The co-pay field is a planning aid. It does not verify benefits, calculate patient responsibility, collect money, or transmit health information. A payment workflow would require a separately approved processor and privacy/security review.
@@ -30,6 +30,7 @@ Keep the public experience intentionally short. Use one primary page with anchor
 | Insurance & co-pay | `#insurance` | Plain-language coverage context and the supplied planner |
 | Visit | `#visit` | Address, telephone, fax, directions, and appointment call to action |
 | Schedule a visit | Scheduling block or booking page | Live Squarespace Scheduling/Acuity calendar |
+| Patient portal | External link to the separately hosted application | OAuth sign-in, non-clinical practice notices, and Doxy.me handoff |
 
 Create a footer link for a privacy notice and any practice-required accessibility, nondiscrimination, and financial-policy notices. Do not collect symptoms, diagnoses, medication information, medical records, or other sensitive health details through a general Squarespace form.
 
@@ -53,12 +54,16 @@ Coral should remain precious: use it for scheduling, selected controls, the arch
 
 | File | Squarespace use | Alternative text |
 | --- | --- | --- |
-| `mcalpine-heart-sprout-mark.png` | Header logo mark and favicon source | Leave blank when adjacent text already names the practice |
-| `mcalpine-portrait-stethoscope.png` | Circular homepage hero | “Dr. W. Esther McAlpine smiling outdoors in a pink blouse with a stethoscope” |
-| `mcalpine-portrait-original.webp` | Biography portrait | “Dr. W. Esther McAlpine smiling outdoors in a pink blouse” |
-| `mcalpine-open-porch-hero.jpg` | Optional supporting family image | “A mother and young daughter arriving at a bright pediatric office” |
+| `mcalpine-sprouting-heart-a.png` | Header logo mark and favicon source | Leave blank when adjacent text already names the practice |
+| `mcalpine-open-porch-expanded.png` | Homepage hero | “A Black mother and daughter arriving at a bright pediatric office alongside a white mother and her sandy-blonde son” |
+| `mcalpine-portrait-stethoscope.png` | Circular Meet Dr. McAlpine portrait | “Dr. W. Esther McAlpine smiling outdoors in a pink blouse with a stethoscope” |
 | `mcalpine-care-scene.png` | Optional supporting care image | “Representative image of a mother and young child during a warm pediatric visit” |
 | `mcalpine-community-children.png` | Community section | “A diverse group of children playing together beneath live oak trees in a Savannah square” |
+| `mcalpine-honduras.jpg` | Slideshow, photo 1 | “Dr. McAlpine smiling in blue scrubs beneath road signs in Honduras” |
+| `mcalpine-india.jpg` | Slideshow, photo 2 | “Dr. McAlpine with a group of international service travelers in front of the Taj Mahal in India” |
+| `mcalpine-community-event.webp` | Slideshow, photo 3 | “Close-up portrait of Dr. McAlpine smiling beneath a blue canopy at a Chatham County event” |
+| `mcalpine-pink-jacket.webp` | Slideshow, photo 4 | “Dr. McAlpine smiling outdoors in a bright pink jacket” |
+| `mcalpine-historical-portrait.jpg` | Slideshow, photo 5 | “Historical studio portrait of Dr. McAlpine in a teal jacket” |
 
 The authentic portrait was supplied directly by the client. The stethoscope version is an approved derivative created from that supplied photograph; the face, expression, clothing, and setting were preserved while the stethoscope was added at the client’s request. The remaining family and community photographs are representative brand imagery and must not be described as photographs of Dr. McAlpine or her patients.
 
@@ -66,7 +71,7 @@ The authentic portrait was supplied directly by the client. The stethoscope vers
 
 ### 1. Prepare the Site Safely
 
-Create or open the Squarespace site, keep it private or password protected, and remove demo pages and placeholder copy. Set the site title to **W. Esther McAlpine, M.D., P.C.** and upload the heart-sprout mark as the logo and browser icon. Squarespace recommends completing site title, logo, font, color, favicon, navigation, and mobile-layout review before launch.[3]
+Create or open the Squarespace site, keep it private or password protected, and remove demo pages and placeholder copy. Set the site title to **W. Esther McAlpine, M.D., P.C.** and upload the broad sprouting-heart mark as the logo and browser icon. Squarespace recommends completing site title, logo, font, color, favicon, navigation, and mobile-layout review before launch.[3]
 
 ### 2. Create the Page and Anchors
 
@@ -83,29 +88,31 @@ Use only one marker per section. Set navigation links to `/#about`, `/#care`, `/
 
 ### 3. Recreate the Hero
 
-Use a two-column Fluid Engine section. Place the text on the left and Dr. McAlpine’s circular portrait on the right. Keep all caption text below the photograph so nothing covers her face, clothing, stethoscope, or supporting copy. Preserve the left-aligned headline:
-
-> Care that knows your child—*and remembers* your family.
-
-Replace that earlier reference line with the approved portrait-led copy:
+Use a two-column Fluid Engine section. Place the text on the left and the expanded office-arrival family image on the right. Keep all caption text below the photograph so nothing covers a face or supporting copy. Use the approved portrait-led headline:
 
 > Meet Dr. W. Esther McAlpine—*the steady heart* families remember.
 
+Use the exact approved supporting copy:
+
+> Relationship-centered pediatric care for infants, children, and adolescents, led by Dr. W. Esther McAlpine—a physician the practice honors as Savannah’s first Black woman pediatrician.
+
 Use **Schedule a visit** as the primary coral button and **Call (912) 349-3682** as the secondary outlined button. On mobile, stack the copy above the image and keep both actions visible without horizontal scrolling.
 
-### 4. Build the Biography and Care Sections
+### 4. Build the Biography, Slideshow, and Care Sections
 
-Use an asymmetric two-column biography layout with the representative care image, the “50+ years in medicine” inset, and the approved biography. Follow it with the deep Live Oak care section containing four service columns. Use headings, not decorative text blocks, so screen-reader users receive a logical document outline.
+Use an asymmetric two-column biography layout with the circular portrait, the “50+ years in medicine” inset, and the source-qualified biography. Attribute residency and teaching details to Dr. McAlpine’s publicly indexed professional profile. Present the 30-plus-year international-service history as a practice-supplied account and state that Medical Wings International’s public archive confirms current global mission work and recent service in Honduras but not the complete personal history.
+
+Follow the biography with a five-photograph slideshow using the client-supplied assets in the manifest. It must not auto-advance; provide previous, next, and direct photo controls, a visible “Photo n of 5” position, keyboard operation, and the listed alternative text. Follow it with the deep Live Oak care section containing four service columns. Use headings, not decorative text blocks, so screen-reader users receive a logical document outline.
 
 ### 5. Add the Insurance Planner
 
 Add a **Code** block in the insurance section, choose **HTML**, turn **Display Source** off, and paste the entire contents of `insurance-planner.html`. JavaScript in code blocks requires an eligible Squarespace plan; if the site’s plan does not support it, replace the planner with a short insurance note and a call button.[1]
 
-The planner intentionally distinguishes between “listed in public provider directories” and “please confirm.” It never promises coverage. Before launch, the practice must review every carrier status and remove any carrier that cannot be substantiated.
+The planner includes **Amerigroup / Wellpoint Georgia** and intentionally distinguishes a directory listing from real-time eligibility. It reads no member data, calls no payer or clearinghouse, and never promises coverage or benefits. Before launch, the practice must review every carrier status and remove or relabel any carrier that cannot be substantiated.
 
 ### 6. Connect Real Appointment Booking
 
-Create the practice’s calendars, appointment types, intake boundaries, availability, cancellation policy, and confirmation messages in Squarespace Scheduling/Acuity. Then add a native **Scheduling block** to the appointment section. Acuity’s official guidance identifies the Scheduling block as the preferred embedding method for Squarespace sites; a booking button can also point to the scheduling page.[4]
+Create the practice’s calendars, appointment types, intake boundaries, availability, cancellation policy, and confirmation messages in Squarespace Scheduling/Acuity. Configure office availability for **Monday, Tuesday, and Thursday, 10:00 AM–12:00 PM and 1:00 PM–5:00 PM**. Configure **Friday telehealth by appointment, 10:00 AM–12:00 PM**, as a distinct visit type. Then add a native **Scheduling block** to the appointment section. Acuity’s official guidance identifies the Scheduling block as the preferred embedding method for Squarespace sites; a booking button can also point to the scheduling page.[4]
 
 Do not request diagnosis, symptoms, medical history, medications, insurance ID photographs, or other sensitive medical details in a general website form. Configure any intake workflow only after the practice confirms its privacy and security requirements.
 
@@ -119,19 +126,28 @@ Publish these details only after final practice confirmation:
 | Address | 340 Eisenhower Drive, Building 700, Suite 740, Savannah, GA 31406 |
 | Telephone | (912) 349-3682 |
 | Fax | (912) 349-3683 |
+| Office hours | Monday, Tuesday, and Thursday, 10:00 AM–12:00 PM and 1:00 PM–5:00 PM |
+| Telehealth | Friday by appointment, 10:00 AM–12:00 PM |
+| Doxy.me check-in | `https://doxy.me/v2/check-in/drmcalpine` |
 | Directions URL | `https://www.google.com/maps/search/?api=1&query=340+Eisenhower+Drive+Building+700+Suite+740+Savannah+GA+31406` |
 
 Use a plain directions button rather than a heavy map embed if page speed is a priority. If a map is added, retain the address in text so it remains accessible and copyable.
 
-### 8. Apply the Custom CSS
+### 8. Link the Patient Portal Safely
+
+Squarespace should link to, not recreate, the separately hosted patient portal. The portal requires a server, OAuth sessions, role checks, database-backed notice records, and authorization controls that are not provided by a portable Code block. Keep its scope limited to non-clinical practice notices and the Doxy.me handoff. Do not add uploads, medical records, diagnosis or symptom messaging, insurance identifiers, or other clinical data without a separate approved system and documented privacy, security, contractual, retention, and incident-response controls. Review `docs/PORTAL-SECURITY-BOUNDARY.md` before launch.
+
+The Doxy.me action must open `https://doxy.me/v2/check-in/drmcalpine` in a new tab, identify Doxy.me as an external service, and avoid collecting medical details before the handoff. Confirm that the destination is controlled by the practice and that the account’s privacy, consent, vendor, and business-associate settings are approved.
+
+### 9. Apply the Custom CSS
 
 Open Squarespace’s Custom CSS panel, paste `custom.css`, and save. Squarespace recommends using CSS mainly for fonts, colors, and backgrounds and warns that extensive custom selectors may be affected by future platform updates.[2] Recheck the site after major Squarespace platform changes.
 
-### 9. Perform Mobile and Accessibility Review
+### 10. Perform Mobile and Accessibility Review
 
 In Fluid Engine mobile view, confirm that the hero stacks correctly, headings do not crop, controls are at least comfortably tappable, no section scrolls sideways, and the sticky header does not cover anchored headings. Test keyboard navigation, visible focus indicators, image alternative text, form labels, button names, color contrast, and reduced-motion behavior.
 
-### 10. Launch
+### 11. Launch
 
 Complete `PREPUBLICATION-CHECKLIST.md`, test every telephone, directions, navigation, insurance, and scheduling link, submit a real test booking, review on at least one iPhone-sized and one Android-sized device, connect the primary domain, and then make the site public. Squarespace’s current launch checklist also calls for checking page slugs, mobile layouts, image quality, integrations, custom code, SEO descriptions, forms, and post-publication behavior.[3]
 
@@ -141,7 +157,10 @@ Complete `PREPUBLICATION-CHECKLIST.md`, test every telephone, directions, naviga
 | --- | --- | --- |
 | Insurance selector | Shows a cautious public-directory status and entered co-pay amount | Practice must verify all carrier listings |
 | Co-pay entry | Formats a user-entered planning amount | Does not calculate benefits or accept payment |
-| Scheduling preview | Lets a parent choose a weekday and part of day, then prepares a telephone handoff | Replace with live Squarespace Scheduling/Acuity availability |
+| Scheduling preview | Offers Monday, Tuesday, and Thursday office windows plus Friday morning telehealth, then prepares a telephone handoff | Replace with live Squarespace Scheduling/Acuity availability |
+| Biography slideshow | Five client-supplied photographs with manual and direct navigation | Rebuild with an accessible Squarespace gallery or approved custom block |
+| Patient portal | OAuth-gated non-clinical notices and Doxy.me handoff | Keep on the separately hosted full-stack application; do not paste into Squarespace |
+| Eligibility adapter | Disabled interface boundary only | Requires an approved payer or clearinghouse, credentials, agreements, and separate security review before activation |
 | Telephone actions | Opens the device dialer | Confirm telephone number |
 | Directions | Opens Google Maps search | Confirm address and suite |
 

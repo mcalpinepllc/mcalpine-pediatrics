@@ -6,17 +6,18 @@ import { CalendarDays, Check, Clipboard, Clock3, PhoneCall } from "lucide-react"
 import { useMemo, useState } from "react";
 import { toast } from "sonner";
 
-const visitWindows = ["Morning", "Midday", "Afternoon"];
+type VisitDate = { date: Date; kind: "office" | "telehealth" };
 
-function getUpcomingWeekdays() {
-  const dates: Date[] = [];
+function getUpcomingVisitDates() {
+  const dates: VisitDate[] = [];
   const cursor = new Date();
   cursor.setHours(12, 0, 0, 0);
   cursor.setDate(cursor.getDate() + 1);
 
   while (dates.length < 6) {
     const day = cursor.getDay();
-    if (day !== 0 && day !== 6) dates.push(new Date(cursor));
+    if ([1, 2, 4].includes(day)) dates.push({ date: new Date(cursor), kind: "office" });
+    if (day === 5) dates.push({ date: new Date(cursor), kind: "telehealth" });
     cursor.setDate(cursor.getDate() + 1);
   }
 
@@ -32,12 +33,13 @@ function fullDate(date: Date) {
 }
 
 export default function ScheduleVisit() {
-  const dates = useMemo(() => getUpcomingWeekdays(), []);
-  const [selectedDate, setSelectedDate] = useState<Date | null>(null);
+  const dates = useMemo(() => getUpcomingVisitDates(), []);
+  const [selectedDate, setSelectedDate] = useState<VisitDate | null>(null);
   const [selectedWindow, setSelectedWindow] = useState("");
   const [prepared, setPrepared] = useState(false);
 
-  const summary = selectedDate && selectedWindow ? `Appointment preference: ${fullDate(selectedDate)}, ${selectedWindow.toLowerCase()}.` : "";
+  const visitWindows = selectedDate?.kind === "telehealth" ? ["10:00 AM–12:00 PM"] : ["10:00 AM–12:00 PM", "1:00 PM–5:00 PM"];
+  const summary = selectedDate && selectedWindow ? `Appointment preference: ${selectedDate.kind === "telehealth" ? "telehealth" : "office"} visit on ${fullDate(selectedDate.date)}, ${selectedWindow}.` : "";
 
   async function copyPreference() {
     try {
@@ -55,10 +57,10 @@ export default function ScheduleVisit() {
           <p className="eyebrow">Appointment note · No. 02</p>
           <h3 className="mt-3 font-display text-3xl font-semibold leading-tight text-live-oak sm:text-4xl">Choose a visit preference.</h3>
           <p className="mt-4 leading-7 text-foreground/70">
-            Pick a day and part of the day, then call with your preference. We keep medical details out of this preview to protect your privacy.
+            Choose an office day or Friday telehealth window, then call with your preference. We keep medical details out of this preview to protect your privacy.
           </p>
           <div className="mt-6 border-l-2 border-coral bg-coral-soft/65 px-4 py-3 text-sm leading-6 text-foreground/75">
-            <strong className="text-live-oak">Preview mode:</strong> a secure Squarespace Scheduling calendar can replace this handoff before publication and provide live confirmation.
+            <strong className="text-live-oak">Request preview:</strong> this is not live booking. The office must confirm the date, time, visit type, and availability.
           </div>
         </div>
 
@@ -66,25 +68,27 @@ export default function ScheduleVisit() {
           <fieldset>
             <legend className="flex items-center gap-2 text-sm font-bold text-live-oak">
               <CalendarDays aria-hidden="true" className="h-5 w-5 text-coral-deep" />
-              1. Select a weekday
+              1. Select an available day
             </legend>
             <div className="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-3">
-              {dates.map((date) => {
-                const selected = selectedDate?.toDateString() === date.toDateString();
+              {dates.map((item) => {
+                const selected = selectedDate?.date.toDateString() === item.date.toDateString();
                 return (
                   <button
-                    key={date.toISOString()}
+                    key={item.date.toISOString()}
                     type="button"
                     onClick={() => {
-                      setSelectedDate(date);
+                      setSelectedDate(item);
+                      setSelectedWindow("");
                       setPrepared(false);
                     }}
                     aria-pressed={selected}
-                    className={`button-press min-h-12 rounded-xl border px-3 py-3 text-sm font-bold transition focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-coral/35 ${
+                    className={`button-press min-h-12 rounded-sm border px-3 py-3 text-sm font-bold transition focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-coral/35 ${
                       selected ? "border-live-oak bg-live-oak text-white shadow-md" : "border-live-oak/15 bg-white text-live-oak hover:border-coral hover:bg-coral-soft"
                     }`}
                   >
-                    {compactDate(date)}
+                    <span className="block">{compactDate(item.date)}</span>
+                    <span className={`mt-1 block text-[0.62rem] uppercase tracking-[0.12em] ${selected ? "text-white/70" : "text-foreground/48"}`}>{item.kind === "telehealth" ? "Telehealth" : "In office"}</span>
                   </button>
                 );
               })}
@@ -96,7 +100,7 @@ export default function ScheduleVisit() {
               <Clock3 aria-hidden="true" className="h-5 w-5 text-coral-deep" />
               2. Choose a time of day
             </legend>
-            <div className="mt-3 grid grid-cols-3 gap-2">
+            <div className="mt-3 grid gap-2 sm:grid-cols-2">
               {visitWindows.map((window) => {
                 const selected = selectedWindow === window;
                 return (
@@ -108,7 +112,7 @@ export default function ScheduleVisit() {
                       setPrepared(false);
                     }}
                     aria-pressed={selected}
-                    className={`button-press min-h-12 rounded-xl border px-2 py-3 text-sm font-bold transition focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-coral/35 ${
+                    className={`button-press min-h-12 rounded-sm border px-2 py-3 text-sm font-bold transition focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-coral/35 ${
                       selected ? "border-coral-deep bg-coral-deep text-white shadow-md" : "border-live-oak/15 bg-white text-live-oak hover:border-coral hover:bg-coral-soft"
                     }`}
                   >
@@ -123,14 +127,14 @@ export default function ScheduleVisit() {
             type="button"
             disabled={!selectedDate || !selectedWindow}
             onClick={() => setPrepared(true)}
-            className="button-press mt-6 flex min-h-12 w-full items-center justify-center rounded-xl bg-coral-deep px-5 py-3 font-bold text-white shadow-[0_10px_25px_rgba(184,72,52,0.22)] transition hover:bg-live-oak focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-coral/35 disabled:cursor-not-allowed disabled:opacity-45"
+            className="button-press mt-6 flex min-h-12 w-full items-center justify-center rounded-full bg-coral-deep px-5 py-3 font-bold text-white shadow-[0_10px_25px_rgba(184,72,52,0.22)] transition hover:bg-live-oak focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-coral/35 disabled:cursor-not-allowed disabled:opacity-45"
           >
             Prepare my request
           </button>
 
           <div className="mt-5 min-h-[90px]" aria-live="polite">
             {prepared ? (
-              <div className="rounded-2xl border border-live-oak/15 bg-sage/70 p-4">
+              <div className="border-y border-r border-l-4 border-live-oak/20 border-l-live-oak bg-sage/60 p-4">
                 <p className="flex items-start gap-2 font-bold text-live-oak">
                   <Check aria-hidden="true" className="mt-0.5 h-5 w-5 shrink-0" />
                   {summary}
