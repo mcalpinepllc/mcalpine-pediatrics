@@ -32,7 +32,7 @@
 - [x] Build an administrator notice composer and an authenticated patient notice feed with explicit prohibitions on clinical content.
 - [x] Add Amerigroup to the insurance planner and distinguish directory participation from real-time eligibility.
 - [x] Prepare a server-side eligibility-adapter boundary for a future approved X12 270/271 clearinghouse or payer API; do not collect eligibility data until credentials and agreements exist.
-- [ ] Verify the client-supplied professional biography claims against accessible primary or authoritative public sources before publication.
+- [x] Verify the client-supplied professional biography claims against accessible primary or authoritative public sources before publication; document unsupported items and keep them explicitly attributed rather than independently asserted.
 - [x] Verify and add a concise global-health blurb describing the client-confirmed 30+ years of Medical Wings International service in Thailand, India, Senegal, and other mission locations, with careful source attribution.
 - [x] Verify authorization behavior, notice privacy boundaries, accessibility, responsive layout, and production build.
 - [ ] Update the Squarespace handoff and prepublication checklist, then save and deliver a checkpoint.
