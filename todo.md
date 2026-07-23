@@ -80,8 +80,8 @@
 - [x] Distinguish portable application code from Manus-specific authentication, storage, APIs, analytics, and hosting behavior.
 - [x] Provide a practical migration sequence, replacement options, security/privacy requirements, acceptance tests, and launch checklist.
 - [x] Validate all project paths and references in the finished Markdown guide.
-- [ ] Save and auto-publish a checkpoint containing the guide and aligned supporting handoff documents.
-- [ ] Attach the finished `docs/CROSS-SERVICE-MIGRATION-GUIDE.md` directly to the user.
+- [x] Save and auto-publish a checkpoint containing the guide and aligned supporting handoff documents.
+- [x] Attach the finished `docs/CROSS-SERVICE-MIGRATION-GUIDE.md` directly to the user.
 
 ## Focused Final Site Edits
 
@@ -112,3 +112,10 @@
 - [x] Verify the biography column and review block at desktop and mobile widths.
 - [x] Run the Vitest suite and production build for the revised layout.
 - [x] Save and auto-publish a checkpoint containing the patient-review placement change.
+
+## Patient Reviews Heading Style
+
+- [x] Change the review heading to exactly `className="mt-3 font-display text-2xl font-semibold text-live-oak">Patient Reviews</p>`.
+- [x] Verify the updated heading in the biography statistics block at desktop and mobile widths.
+- [x] Run the Vitest suite and production build after the heading change.
+- [ ] Save and auto-publish a checkpoint containing the revised heading.
